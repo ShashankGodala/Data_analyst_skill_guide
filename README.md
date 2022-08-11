@@ -1,1 +1,0 @@
-# Data_analyst_skill_guide
