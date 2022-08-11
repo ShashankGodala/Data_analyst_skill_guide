@@ -106,34 +106,6 @@ with st.container():
         st.markdown("<h3 style='text-align: center;'>Where are the jobs loacated</h3>", unsafe_allow_html=True)
         st.map(data=jobs_data, use_container_width=False)
         
- 
-# Quick job search title
-quick_search_data = jobs_data[['Title','Company','Location','Type','Job_link']]
-
-# quick job search filters
-with st.container():
-    st.write('---')
-    st.markdown("<h2 style='text-align: center;'>Quick search</h2>", unsafe_allow_html=True)
-    col1,col2,col3,col4 = st.columns(4)
-    with col1:
-        Company = st.multiselect('Select Company',options=quick_search_data['Company'].drop_duplicates(), default=None)
-    with col2:
-        Location = st.multiselect('Select Location',options=quick_search_data['Location'].drop_duplicates(), default=None)
-    with col3:
-        Type = st.multiselect('Select job type',options=quick_search_data['Type'].drop_duplicates(), default=None)
-
-# Assigning the dataset to filter according to the filters created above
-if len(Company) > 0:
-    data = quick_search_data[quick_search_data['Company'].isin(Company)]
-elif len(Location) > 0:
-    data = quick_search_data[quick_search_data['Location'].isin(Location)]
-elif len(Type) > 0:
-    data = quick_search_data[quick_search_data['Type'].isin(Type)]
-else:
-    data = quick_search_data
-    
-# showing the jobs dataframe
-st.dataframe(data= data, height = 500)
 
 st.write('')
 st.markdown('#### Built by Shashank Godala')
