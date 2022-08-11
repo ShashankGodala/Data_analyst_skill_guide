@@ -134,8 +134,14 @@ else:
     
 # showing the jobs dataframe
 st.dataframe(data= data, height = 500)
+
+st.write('')
 st.write('Built by Shashank Godala')
+st.write('[Website](https://shashankgodala.me/)')
 st.write('[Github](https://github.com/ShashankGodala)')
+st.write('[Linkedin](https://www.linkedin.com/in/shashank-godala/)')
+st.write('[Tableau Public](https://public.tableau.com/app/profile/shashank4870)')
+
 
 
 
