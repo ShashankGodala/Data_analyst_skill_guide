@@ -134,6 +134,8 @@ else:
     
 # showing the jobs dataframe
 st.dataframe(data= data, height = 500)
+st.write('Built by Shashank Godala')
+st.write('[Github](https://github.com/ShashankGodala)')
 
 
 
