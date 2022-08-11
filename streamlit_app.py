@@ -95,7 +95,7 @@ quick_search_data = jobs_data[['Title','Company','Location','Type','Job_link']]
 with st.container():
     st.write('---')
     st.markdown("<h2 style='text-align: center;'>Quick search</h2>", unsafe_allow_html=True)
-    col1,col2,col3 = st.columns(3)
+    col1,col2,col3,col4 = st.columns(4)
     with col1:
         Company = st.multiselect('Select Company',options=quick_search_data['Company'].drop_duplicates(), default=None)
     with col2:
