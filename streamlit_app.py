@@ -1,21 +1,35 @@
+# importing libraries 
 import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
+
+# importing data into respective variables
 jobs_data = pd.read_csv('https://raw.githubusercontent.com/ShashankGodala/Data_analyst_skill_guide/main/indeed_jobdata_cleaned.csv',usecols=['Title','Company','Location','lat','lon','Job_link','Type'])
+
+# soft skills and their frequency
 soft_skills = pd.read_csv('https://raw.githubusercontent.com/ShashankGodala/Data_analyst_skill_guide/main/soft_skills_frequency.csv')
+#sorting the data according to the frequency
 soft_skills_sorted = soft_skills.sort_values(by='frequency', ascending = True)
+
+# hard skills and their frequency
 hard_skills = pd.read_csv('https://raw.githubusercontent.com/ShashankGodala/Data_analyst_skill_guide/main/hard_skills_frequency.csv')
 hard_skills_sorted = hard_skills.sort_values(by = 'frequency', ascending = True)
+
+# top tools and their frequency
 tools = pd.read_csv('https://raw.githubusercontent.com/ShashankGodala/Data_analyst_skill_guide/main/tools_frequency.csv')
 tools_sorted = tools.sort_values(by = 'frequency', ascending = True)
+
+# top languages and their frequency
 languages = pd.read_csv('https://raw.githubusercontent.com/ShashankGodala/Data_analyst_skill_guide/main/languages_frequency.csv')
 languages_sorted = languages.sort_values(by = 'frequency', ascending = True)
 
-
+# setting page icon and title
 st.set_page_config(page_title='Skills for data analysts',page_icon = ':tada:',layout = 'wide')
-st.title('Hello, I am Shashank :wave:')
 
+
+# Introduction
+st.title('Hello, I am Shashank :wave:')
 
 with st.container():
     st.markdown('### welcome to the Data Analyst skill guide')
@@ -25,6 +39,7 @@ with st.container():
     
 st.write('---')
 
+# skills dashboard title
 st.markdown("<h3 style='text-align: center;'>Top skills and their frequency of appearance in job descriptions</h3>", unsafe_allow_html=True)
 
 # building soft skills bar chart
@@ -68,6 +83,7 @@ languages_chart = languages_fig.update_layout({
                                         yaxis = dict(tickfont = dict(size=20)))
                                         
 
+# arranging all the charts plotted above in a dashboard layout
 with st.container():
     st.write('---')
     left_column, right_column = st.columns(2)
@@ -82,16 +98,19 @@ with st.container():
         st.markdown("<h4 style='text-align: center;'>Programming languages</h4>", unsafe_allow_html=True)
         st.plotly_chart(languages_chart)
 
-
+# jobs location map
 with st.container():
     st.write('---')
     col1,col2,col3 = st.columns((1,2,1))
     with col2:
         st.markdown("<h3 style='text-align: center;'>Where are the jobs loacated</h3>", unsafe_allow_html=True)
         st.map(data=jobs_data, use_container_width=False)
-
+        
+ 
+# Quick job search title
 quick_search_data = jobs_data[['Title','Company','Location','Type','Job_link']]
 
+# quick job search filters
 with st.container():
     st.write('---')
     st.markdown("<h2 style='text-align: center;'>Quick search</h2>", unsafe_allow_html=True)
@@ -103,6 +122,7 @@ with st.container():
     with col3:
         Type = st.multiselect('Select job type',options=quick_search_data['Type'].drop_duplicates(), default=None)
 
+# Assigning the dataset to filter according to the filters created above
 if len(Company) > 0:
     data = quick_search_data[quick_search_data['Company'].isin(Company)]
 elif len(Location) > 0:
@@ -111,7 +131,8 @@ elif len(Type) > 0:
     data = quick_search_data[quick_search_data['Type'].isin(Type)]
 else:
     data = quick_search_data
-
+    
+# showing the jobs dataframe
 st.dataframe(data= data, height = 500)
 
 
