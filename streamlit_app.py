@@ -44,7 +44,7 @@ st.markdown("<h3 style='text-align: center;'>Top skills and their frequency of a
 
 # building soft skills bar chart
 soft_skills_fig = px.bar(soft_skills_sorted,x='frequency',y='name', text_auto=True,color_discrete_sequence =['#add8e6']*len(soft_skills_sorted))
-soft_skills_traces = soft_skills_fig.update_traces(textfont_size=12)
+soft_skills_traces = soft_skills_fig.update_traces(textfont_size=14)
 soft_skills_chart = soft_skills_traces.update_layout({
                                         'plot_bgcolor': 'rgba(0, 0, 0, 0)',
                                         'paper_bgcolor': 'rgba(0, 0, 0, 0)',
