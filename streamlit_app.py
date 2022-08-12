@@ -43,7 +43,7 @@ st.write('---')
 st.markdown("<h3 style='text-align: center;'>Top skills and their frequency of appearance in job descriptions</h3>", unsafe_allow_html=True)
 
 # building soft skills bar chart
-soft_skills_fig = px.bar(soft_skills_sorted,x='frequency',y='name', text_auto=True,color_discrete_sequence =['#808080']*len(soft_skills_sorted))
+soft_skills_fig = px.bar(soft_skills_sorted,x='frequency',y='name', text_auto='.2s',color_discrete_sequence =['#808080']*len(soft_skills_sorted))
 soft_skills_chart = soft_skills_fig.update_layout({
                                         'plot_bgcolor': 'rgba(0, 0, 0, 0)',
                                         'paper_bgcolor': 'rgba(0, 0, 0, 0)',
