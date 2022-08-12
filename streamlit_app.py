@@ -43,7 +43,7 @@ st.write('---')
 st.markdown("<h3 style='text-align: center;'>Top skills and their frequency of appearance in job descriptions</h3>", unsafe_allow_html=True)
 
 # building soft skills bar chart
-soft_skills_fig = px.bar(soft_skills_sorted,x='frequency',y='name',color_discrete_sequence =['#808080']*len(soft_skills_sorted))
+soft_skills_fig = px.bar(soft_skills_sorted,x='frequency',y='name', text_auto=True,color_discrete_sequence =['#808080']*len(soft_skills_sorted))
 soft_skills_chart = soft_skills_fig.update_layout({
                                         'plot_bgcolor': 'rgba(0, 0, 0, 0)',
                                         'paper_bgcolor': 'rgba(0, 0, 0, 0)',
@@ -53,7 +53,7 @@ soft_skills_chart = soft_skills_fig.update_layout({
                                         yaxis = dict(tickfont = dict(size=20)))
 
 # building hard skills bar chart
-hard_skills_fig = px.bar(hard_skills_sorted,x='frequency',y='name',color_discrete_sequence =['#808080']*len(hard_skills_sorted))
+hard_skills_fig = px.bar(hard_skills_sorted,x='frequency',y='name',text_auto=True,color_discrete_sequence =['#808080']*len(hard_skills_sorted))
 hard_skills_chart = hard_skills_fig.update_layout({
                                         'plot_bgcolor': 'rgba(0, 0, 0, 0)',
                                         'paper_bgcolor': 'rgba(0, 0, 0, 0)',
@@ -63,7 +63,7 @@ hard_skills_chart = hard_skills_fig.update_layout({
                                         yaxis = dict(tickfont = dict(size=20)))
 
 # building top tools bar chart
-tools_fig = px.bar(tools_sorted,x='frequency',y='name',color_discrete_sequence =['#808080']*len(tools_sorted))
+tools_fig = px.bar(tools_sorted,x='frequency',y='name',text_auto=True,color_discrete_sequence =['#808080']*len(tools_sorted))
 tools_chart = tools_fig.update_layout({
                                         'plot_bgcolor': 'rgba(0, 0, 0, 0)',
                                         'paper_bgcolor': 'rgba(0, 0, 0, 0)',
@@ -73,7 +73,7 @@ tools_chart = tools_fig.update_layout({
                                         yaxis = dict(tickfont = dict(size=20)))
 
 # building languages bar chart
-languages_fig = px.bar(languages_sorted,x='frequency',y='name',color_discrete_sequence =['#808080']*len(hard_skills_sorted))
+languages_fig = px.bar(languages_sorted,x='frequency',y='name',text_auto=True,color_discrete_sequence =['#808080']*len(hard_skills_sorted))
 languages_chart = languages_fig.update_layout({
                                         'plot_bgcolor': 'rgba(0, 0, 0, 0)',
                                         'paper_bgcolor': 'rgba(0, 0, 0, 0)',
