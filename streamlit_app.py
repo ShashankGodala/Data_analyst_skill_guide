@@ -55,7 +55,8 @@ soft_skills_chart = soft_skills_traces.update_layout({
 
 # building hard skills bar chart
 hard_skills_fig = px.bar(hard_skills_sorted,x='frequency',y='name',text_auto=True,color_discrete_sequence =['#add8e6']*len(hard_skills_sorted))
-hard_skills_chart = hard_skills_fig.update_layout({
+hard_skills_traces = hard_skills_fig.update_traces(textfont_size=16)
+hard_skills_chart = hard_skills_traces.update_layout({
                                         'plot_bgcolor': 'rgba(0, 0, 0, 0)',
                                         'paper_bgcolor': 'rgba(0, 0, 0, 0)',
                                         },
@@ -65,7 +66,8 @@ hard_skills_chart = hard_skills_fig.update_layout({
 
 # building top tools bar chart
 tools_fig = px.bar(tools_sorted,x='frequency',y='name',text_auto=True,color_discrete_sequence =['#add8e6']*len(tools_sorted))
-tools_chart = tools_fig.update_layout({
+tools_traces = tools_fig.update_traces(textfont_size=16)
+tools_chart = tools_traces.update_layout({
                                         'plot_bgcolor': 'rgba(0, 0, 0, 0)',
                                         'paper_bgcolor': 'rgba(0, 0, 0, 0)',
                                         },
@@ -75,7 +77,8 @@ tools_chart = tools_fig.update_layout({
 
 # building languages bar chart
 languages_fig = px.bar(languages_sorted,x='frequency',y='name',text_auto=True,color_discrete_sequence =['#add8e6']*len(hard_skills_sorted))
-languages_chart = languages_fig.update_layout({
+languages_traces = languages_fig.update_traces(textfont_size=16)
+languages_chart = languages_traces.update_layout({
                                         'plot_bgcolor': 'rgba(0, 0, 0, 0)',
                                         'paper_bgcolor': 'rgba(0, 0, 0, 0)',
                                         },
