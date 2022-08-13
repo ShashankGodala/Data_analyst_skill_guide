@@ -100,10 +100,10 @@ with st.container():
         st.write(' ')
         st.markdown("<h4 style='text-align: center;'>Tools</h4>", unsafe_allow_html=True)
         st.plotly_chart(tools_chart) 
-        st.write(' ')
         st.write('Amazing complete courses on both BI tools are available from Pawan Lalwani, Edureka, and simplilearn.')
         st.write('Visit Leila Gharani and Chandoo on YouTube for advanced Excel.')
         st.write('An excellent YouTube channel to learn powerpoint tips and tricks is Kevin Stratvert.')
+        st.write('---')
     with right_column:
         st.markdown("<h4 style='text-align: center;'>Hard skills</h4>", unsafe_allow_html=True)
         st.plotly_chart(hard_skills_chart)
