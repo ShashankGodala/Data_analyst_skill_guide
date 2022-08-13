@@ -98,24 +98,31 @@ with st.container():
         st.write('Step Outside Your Comfort Zone, Self-Reflect, Actively Listen, Improve Writing Skills.')
         st.write('Take on a Leadership Role, Communicate Often, Work on Critical-Thinking Skills.')
         st.write(' ')
-        st.write('---')
+    with right_column:
+        st.markdown("<h4 style='text-align: center;'>Hard skills</h4>", unsafe_allow_html=True)
+        st.plotly_chart(hard_skills_chart)
+        st.write('Although analytical, reporting, and visualisation skills can be acquired, they can only be enhanced by continuing to work on projects that involve the aforementioned.')
+        st.write('Use less text and more visuals in your presentation, be passionate and engaging, maintain eye contact as some advice for practising effective presentations.')
+        
+st.write('---')
+
+with st.contianer():
+    left_column, right_column = st.columns(2)
+    with left_column:
         st.markdown("<h4 style='text-align: center;'>Tools</h4>", unsafe_allow_html=True)
         st.plotly_chart(tools_chart) 
         st.write('Amazing complete courses on both BI tools are available from Pawan Lalwani, Edureka, and simplilearn.')
         st.write('Visit Leila Gharani and Chandoo on YouTube for advanced Excel.')
         st.write('An excellent YouTube channel to learn powerpoint tips and tricks is Kevin Stratvert.')
     with right_column:
-        st.markdown("<h4 style='text-align: center;'>Hard skills</h4>", unsafe_allow_html=True)
-        st.plotly_chart(hard_skills_chart)
-        st.write('Although analytical, reporting, and visualisation skills can be acquired, they can only be enhanced by continuing to work on projects that involve the aforementioned.')
-        st.write('Use less text and more visuals in your presentation, be passionate and engaging, maintain eye contact as some advice for practising effective presentations.')
-        st.write('---')
         st.markdown("<h4 style='text-align: center;'>Programming languages</h4>", unsafe_allow_html=True)
         st.plotly_chart(languages_chart)
         st.write('For absolute beginners I recommend SQL Mastery course from CodewithMosh.com (keep an eye for sale)')
         st.write('stratascratch, Hackerrank and w3 schools are great websites to practice SQL problems.')
         st.write('freecodecamp.org has a free video on youtube on python for data analytics.')
+        
 st.write('---')
+
 st.write('Follow [Alex freberg](https://www.youtube.com/c/AlexTheAnalyst), [Shashank Kalanithi](https://www.youtube.com/c/ShashankKalanithiData) and [Luke Barousse](https://www.youtube.com/c/LukeBarousse) on youtube.')
 st.write('Read or listen to "story telling with data" book by Cole nussbaumer knaflic.')
 
