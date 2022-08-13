@@ -94,7 +94,7 @@ with st.container():
     with left_column:
         st.markdown("<h4 style='text-align: center;'>Soft skills</h4>", unsafe_allow_html=True)
         st.plotly_chart(soft_skills_chart)
-        st.write('some tips to develop communication and leadership skills, 
+        st.write('some tips to develop communication and leadership skills,')
         st.write('Step Outside Your Comfort Zone, Self-Reflect, Actively Listen, Improve Writing Skills, Take on a Leadership Role, Communicate Often, Work on Critical-Thinking Skills.')
         st.markdown("<h4 style='text-align: center;'>Tools</h4>", unsafe_allow_html=True)
         st.plotly_chart(tools_chart)
