@@ -106,7 +106,7 @@ with st.container():
         
 st.write('---')
 
-with st.contianer():
+with st.container():
     left_column, right_column = st.columns(2)
     with left_column:
         st.markdown("<h4 style='text-align: center;'>Tools</h4>", unsafe_allow_html=True)
