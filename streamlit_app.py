@@ -108,7 +108,7 @@ with st.container():
         st.markdown("<h4 style='text-align: center;'>Hard skills</h4>", unsafe_allow_html=True)
         st.plotly_chart(hard_skills_chart)
         st.write('Although analytical, reporting, and visualisation skills can be acquired, they can only be enhanced by continuing to work on projects that involve the aforementioned.')
-        st.write('Use less text and more visuals in your presentation, be passionate and engaging, maintain eye contact, and invite questions at the conclusion as some advice for practising effective presentations.')
+        st.write('Use less text and more visuals in your presentation, be passionate and engaging, maintain eye contact as some advice for practising effective presentations.')
         st.markdown("<h4 style='text-align: center;'>Programming languages</h4>", unsafe_allow_html=True)
         st.plotly_chart(languages_chart)
         st.write('For absolute beginners I recommend SQL Mastery course from CodewithMosh.com (keep an eye for sale)')
