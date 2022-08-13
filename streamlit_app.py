@@ -113,8 +113,8 @@ with st.container():
         st.write('stratascratch, Hackerrank and w3 schools are great websites to practice SQL problems.')
         st.write('freecodecamp.org has a free video on youtube on python for data analytics.')
 st.write('---')
-st.write('Follow [Alex freberg](https://www.youtube.com/c/AlexTheAnalyst), [Shashank Kalanithi](https://www.youtube.com/c/ShashankKalanithiData), [Luke Barousse](https://www.youtube.com/c/LukeBarousse) on youtube')
-st.write('Read or listen to "story telling with data" book by Cole nussbaumer knaflic')
+st.write('Follow [Alex freberg](https://www.youtube.com/c/AlexTheAnalyst), [Shashank Kalanithi](https://www.youtube.com/c/ShashankKalanithiData) and [Luke Barousse](https://www.youtube.com/c/LukeBarousse) on youtube.')
+st.write('Read or listen to "story telling with data" book by Cole nussbaumer knaflic.')
 
 
 # jobs location map
