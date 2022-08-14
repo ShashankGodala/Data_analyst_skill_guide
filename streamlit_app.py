@@ -125,6 +125,7 @@ st.write('---')
 
 st.write('Follow [Alex freberg](https://www.youtube.com/c/AlexTheAnalyst), [Shashank Kalanithi](https://www.youtube.com/c/ShashankKalanithiData) and [Luke Barousse](https://www.youtube.com/c/LukeBarousse) on youtube.')
 st.write('Read or listen to "story telling with data" book by Cole nussbaumer knaflic.')
+st.write('DataCamp, Udemy, Coursera are amazing platforms to learn and practice all the tools needed')
 
 
 # jobs location map
