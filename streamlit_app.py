@@ -94,7 +94,6 @@ with st.container():
         st.write('some tips to develop communication and leadership skills,')
         st.write('Step Outside Your Comfort Zone, Self-Reflect, Actively Listen, Improve Writing Skills.')
         st.write('Take on a Leadership Role, Communicate Often, Work on Critical-Thinking Skills.')
-        st.write(' ')
         
 st.write('---')
         
