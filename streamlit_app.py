@@ -86,7 +86,7 @@ languages_chart = languages_traces.update_layout({
                                         xaxis_showticklabels =False,
                                         yaxis = dict(tickfont = dict(size=20)))
                                         
-
+st.write('---')
 # arranging all the charts plotted above in a dashboard layout
 with st.container():
         st.markdown("<h4 style='text-align: center;'>Soft skills</h4>", unsafe_allow_html=True)
