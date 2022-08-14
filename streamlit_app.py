@@ -128,11 +128,12 @@ with st.container():
         st.write('Follow [Alex freberg](https://www.youtube.com/c/AlexTheAnalyst), [Shashank Kalanithi](https://www.youtube.com/c/ShashankKalanithiData) and [Luke Barousse](https://www.youtube.com/c/LukeBarousse) on youtube.')
         st.write('Read or listen to "story telling with data" book by Cole nussbaumer knaflic.')
         st.write('DataCamp, Udemy, Coursera are amazing platforms to learn and practice all the tools needed')
-
+   
+st.write('---')
 
 # jobs location map
 with st.container():
-        st.markdown("<h3 style='text-align: center;'>Where are the jobs loacated</h3>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center;'>Where are the jobs loacated?</h3>", unsafe_allow_html=True)
         st.map(data=jobs_data, use_container_width=False)
         
 st.write('---')
