@@ -25,7 +25,7 @@ languages = pd.read_csv('https://raw.githubusercontent.com/ShashankGodala/Data_a
 languages_sorted = languages.sort_values(by = 'frequency', ascending = True)
 
 # setting page icon and title
-st.set_page_config(page_title='Skills for data analysts',page_icon = ':tada:',layout = 'wide')
+st.set_page_config(page_title='Skills for data analysts',page_icon = ':tada:')
 
 
 # Introduction
