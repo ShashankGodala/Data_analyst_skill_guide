@@ -132,14 +132,11 @@ with st.container():
 
 # jobs location map
 with st.container():
-    st.write('---')
-    col1,col2,col3 = st.columns((1,2,1))
-    with col2:
         st.markdown("<h3 style='text-align: center;'>Where are the jobs loacated</h3>", unsafe_allow_html=True)
         st.map(data=jobs_data, use_container_width=False)
         
-
-st.write('')
+st.write('---')
+        
 st.markdown('#### Built by Shashank Godala')
 st.write('[Website](https://shashankgodala.me/)')
 st.write('[Github](https://github.com/ShashankGodala)')
