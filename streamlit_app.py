@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
-import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 
 # importing data into respective variables
 jobs_data = pd.read_csv('https://raw.githubusercontent.com/ShashankGodala/Data_analyst_skill_guide/main/indeed_jobdata_cleaned.csv',usecols=['Title','Company','Location','lat','lon','Job_link','Type'])
@@ -44,7 +44,7 @@ st.write('---')
 st.markdown("<h3 style='text-align: center;'>Top skills and their frequency of appearance in job descriptions</h3>", unsafe_allow_html=True)
 
 # building soft skills bar chart
-soft_skills_fig = px.bar(soft_skills_sorted,x='frequency',y='name', text_auto=True,color_discrete_sequence =['#add8e6']*len(soft_skills_sorted),{staticPlot: true})
+soft_skills_fig = px.bar(soft_skills_sorted,x='frequency',y='name', text_auto=True,color_discrete_sequence =['#add8e6']*len(soft_skills_sorted))
 soft_skills_traces = soft_skills_fig.update_traces(textfont_size=16)
 soft_skills_chart = soft_skills_traces.update_layout({
                                         'plot_bgcolor': 'rgba(0, 0, 0, 0)',
@@ -53,6 +53,7 @@ soft_skills_chart = soft_skills_traces.update_layout({
                                         yaxis_title='',xaxis_visible= False, 
                                         xaxis_showticklabels =False,
                                         yaxis = dict(tickfont = dict(size=20)))
+
 
 # building hard skills bar chart
 hard_skills_fig = px.bar(hard_skills_sorted,x='frequency',y='name',text_auto=True,color_discrete_sequence =['#add8e6']*len(hard_skills_sorted))
