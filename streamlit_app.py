@@ -140,7 +140,7 @@ with st.container():
 st.write('---')
         
 st.markdown('#### Built by Shashank Godala')
-st.write('[Website](https://shashankgodala.me/)')
+st.write('[Portfolio Website](https://shashankgodala.me/)')
 st.write('[Github](https://github.com/ShashankGodala)')
 st.write('[Linkedin](https://www.linkedin.com/in/shashank-godala/)')
 st.write('[Tableau Public](https://public.tableau.com/app/profile/shashank4870)')
